@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Font awesome cdn-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!--Vue-->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <!--Font awesome css-->
+  <link rel="stylesheet" href="style.css">
+  <title>Carosello Mono Array</title>
+</head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper d-flex">
+      <!--Contenitore img-->
+      <div class="img-container" @mouseover ="autoPlay = false" @mouseleave ="autoPlay = true">
+        <div id="imgBox">
+          <img class="slide" :src="imgCompilation[contatore]">  
+        </div>
+        <!--Freccia prossima immagine -->
+        <div class="row next"  @click="incrementatore(true)">
+          <i class="fa-solid fa-arrow-up"></i>
+        </div>
+
+        <!--Freccia immagine precedente  -->
+        <div class="row back" @click="incrementatore(false)">
+          <i class="fa-solid fa-arrow-down"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+<!-- con questo if posso far sparire il tasto next e back  -->
+
+<!--v-if="contatore != imgCompilation.length -1"-->
+
+<!--v-if="contatore != 0"-->
+
+
+  <script src="script.js"></script>
+</body>
+</html>
